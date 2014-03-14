@@ -40,7 +40,7 @@
                     window.localStorage.msg += ' but the API sent no data back';
                 window.location = './result.html';
             }).fail(function(xhr) {
-                window.localStorage.msg = xhr.responseText;
+                window.localStorage.msg = xhr.status + " " + xhr.responseText;
                 window.location = './result.html';
             });
         }

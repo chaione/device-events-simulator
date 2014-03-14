@@ -9,85 +9,109 @@
 <h1>Carbon Yellow request simulator</h1>
 
 <form>
-    App ID: <select id="select_app_id">
-    <option selected="selected"></option>
-</select><br>
-    Device ID: <select id="select_device_id">
-    <option selected="selected"></option>
-</select>
+    App ID: 
+</input>
+<input required id="select_app_id">
+<br>
+    Device ID: 
+</input>
+<input id="select_device_id">
 </form>
 
-<a href="#" id="get-beacon">
+<p style="font-style: italic; font-weight: bold;">Beacons:</p>
+<ul>
+  <li><a href="#" id="get-beacon">
     <span>Get all beacons belongs to an app</span> </br>
-</a>
-
-<a href="#" id="create-beacon">
+  </a>  </li>
+  <li><a href="#" id="create-beacon">
     <span>Create a new beacon</span></br>
-</a>
-
-<a href="#" id="delete-beacon">
-    <span>Delete an existing beacon</span></br>
-</a>
-
-<a href="#" id="get-beacon-by-name">
-    <span>Get beacon's info by name</span></br>
-</a>
-
-<a href="#" id="edit-beacon">
-    <span>Edit beacon's info</span></br>
-</a>
-
-<a href="#" id="get-devices">
-    <span>Get all devices for an app</span></br>
-</a>
-
-<a href="#" id="edit-devices">
+  </a></li>
+  <li>
+    
+    <a href="#" id="delete-beacon">
+      <span>Delete an existing beacon</span></br>
+    </a></li>
+  <li>
+    
+    <a href="#" id="get-beacon-by-name">
+      <span>Get beacon's info by name</span></br>
+    </a></li>
+  <li>
+    
+    <a href="#" id="edit-beacon">
+      <span>Edit beacon's info</span></br>
+    </a></li>
+</ul>
+<p style="font-weight: bold; font-style: italic;">Devices:</p>
+<ul>
+  <li>
+    
+    <a href="#" id="get-devices">
+    <span>Get all devices for an app</span></a></li>
+  <li><a href="#" id="edit-devices">
     <span>Edit a device info</span></br>
-</a>
-
-<a href="#" id="create-event">
-    <span>Create a new event</span></br>
-</a>
-
-<a href="#" id="get-geofences">
-    <span>Get available geofence</span></br>
-</a>
-
-<a href="#" id="create-geofence">
+  </a></li>
+</ul>
+<p style="font-style: italic; font-weight: bold;">Events:</p>
+<ul>
+  <li>
+    
+    <a href="#" id="create-event">
+      <span>Create a new event</span></br>
+    </a></li>
+</ul>
+<p style="font-style: italic; font-weight: bold;">Geo-fence:</p>
+<ul>
+  <li>
+    
+    <a href="#" id="get-geofences">
+      <span>Get available geofence</span></br>
+    </a>  </li>
+  <li><a href="#" id="create-geofence">
     <span>Create a geofence</span></br>
-</a>
-
-<a href="#" id="delete-geofence">
-    <span>Delete an existing geofence</span></br>
-</a>
-
-<a href="#" id="get-geofence">
+  </a></li>
+  <li>
+    
+    <a href="#" id="delete-geofence">
+      <span>Delete an existing geofence</span></br>
+    </a>  </li>
+  <li><a href="#" id="get-geofence">
     <span>Get an existing geofence's information</span></br>
-</a>
-
-<a href="#" id="edit-geofence">
-    <span>Edit an existing geofence's information</span></br>
-</a>
-
-<a href="#" id="get-manifest">
-    <span>Get Application Manifest</span></br>
-</a>
-
-<a href="#" id="get-vault-data">
-    <span>Get the vault's data</span></br>
-</a>
-
-<a href="#" id="update-vault-data">
-    <span>Update the vault's data</span></br>
-</a>
-
-<a href="#" id="delete-vault-data">
+  </a></li>
+  <li>
+    
+    <a href="#" id="edit-geofence">
+      <span>Edit an existing geofence's information</span></br>
+    </a></li>
+</ul>
+<p style="font-style: italic; font-weight: bold;">Application Manifest:</p>
+<ul>
+  <li>
+    
+    <a href="#" id="get-manifest">
+      <span>Get Application Manifest</span></br>
+    </a></li>
+</ul>
+<p style="font-style: italic; font-weight: bold;">Vaults:</p>
+<ul>
+  <li>
+    
+    <a href="#" id="get-vault-data">
+      <span>Get the vault's data</span></br>
+    </a></li>
+  <li>
+    
+    <a href="#" id="update-vault-data">
+      <span>Update the vault's data</span></br>
+    </a>  </li>
+  <li><a href="#" id="delete-vault-data">
     <span>Delete the vault's data</span></br>
-</a>
-
-<a href="#" id="create-vault-data">
-    <span>Create data in vault</span></br>
-</a>
-
+  </a></li>
+  <li>
+    
+    <a href="#" id="create-vault-data">
+      <span>Create data in vault</span></br>
+    </a></li>
+</ul>
 </body>
 </html>

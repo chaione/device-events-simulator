@@ -18,6 +18,11 @@
         else
             json = {};
 
+        if(window.localStorage.msg == '') {
+            window.localStorage.msg = 'Error';
+            json = {};
+        }
+
         $('#msg').append(window.localStorage.msg);
 
         $('#editor').jsonEditor(json, { change: function (newdata) {

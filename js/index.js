@@ -2,28 +2,28 @@
  * Created by khoat_000 on 3/9/14.
  */
 $(document).ready(function() {
-    var app1 = {
-        app_id: 'b4ce61a4-24cb-484b-9f6e-08efb2c64c38',
-        device_id: [ 'FC5D2EDD-2BD8-4704-881B-20D321D0D290' ]
-    };
-    var app2 = {
-        app_id: '49f76a62-013a-4bfb-870d-ed04d040254e',
-        device_id: [ 'A5062C12-080F-4733-A5CE-4BED904C6CF9' ]
-    }
-    var apps = [];
-    apps.push(app1);
-    apps.push(app2);
-
-    for(var i = 0; i < apps.length; i++) {
-        $('#select_app_id').append($("<option></option>")
-            .attr("value", apps[i].app_id)
-            .text(apps[i].app_id));
-        for(var j = 0; j < apps[i].device_id.length; j++) {
-            $('select#select_device_id').append($('<option></option>')
-                .attr("value", apps[i].device_id[j])
-                .text(apps[i].device_id[j]));
-        }
-    }
+//    var app1 = {
+//        app_id: 'b4ce61a4-24cb-484b-9f6e-08efb2c64c38',
+    //        device_id: [ 'FC5D2EDD-2BD8-4704-881B-20D321D0D290' ]
+//    };
+//    var app2 = {
+//        app_id: '49f76a62-013a-4bfb-870d-ed04d040254e',
+//        device_id: [ 'A5062C12-080F-4733-A5CE-4BED904C6CF9' ]
+//    }
+//    var apps = [];
+//    apps.push(app1);
+//    apps.push(app2);
+//
+//    for(var i = 0; i < apps.length; i++) {
+//        $('#select_app_id').append($("<option></option>")
+//            .attr("value", apps[i].app_id)
+//            .text(apps[i].app_id));
+//        for(var j = 0; j < apps[i].device_id.length; j++) {
+//            $('select#select_device_id').append($('<option></option>')
+//                .attr("value", apps[i].device_id[j])
+//                .text(apps[i].device_id[j]));
+//        }
+//    }
 
     $('#get-beacon').click(function() {
         var app_id = $('#select_app_id').val();
