@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Beacon name</title>
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+</head>
+<body>
+<form>
+    Beacon name: <input type="text" id="beacon-name"><br>
+    <a href="#" id="submit">Submit!</a>
+</form>
+
+</body>
+
+<script>
+    $(document).ready(function() {
+        function sendRequest(type) {
+            var app_id = window.localStorage.app_id;
+            var device_id = window.localStorage.device_id;
+            var name = $('#beacon-name').val();
+
+            $.ajax({
+                url: 'http://carbon-staging.herokuapp.com/api/beacons/' + name,
+                type: type,
+                headers: {
+                    'Authorization': 'Token token="' + app_id + '"',
+                    'CARBON_DEVICE_ID': device_id
+                }
+            }).done(function(msg) {
+                window.localStorage.result = JSON.stringify(msg);
+                window.localStorage.msg = 'Success';
+                if(!msg)
+                    window.localStorage.msg += ' but the API sent no data back';
+
+                window.location = './result.html';
+            }).fail(function(xhr) {
+                window.localStorage.msg = 'Error ' + xhr.responseText;
+                window.location = './result.html';
+            });
+        }
+
+        $('#submit').click(function() {
+            var method = window.localStorage.method;
+            if(method && method !== '') {
+                sendRequest(method);
+            }
+        });
+    });
+</script>
+</html>

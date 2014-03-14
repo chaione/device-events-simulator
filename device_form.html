@@ -1,0 +1,47 @@
+<link rel="stylesheet" type="text/css" href="./style/jsoneditor.css"/>
+
+<div id="editor" class="json-editor"></div>
+<pre id="json"></pre>
+
+<button id="send">Submit!</button>
+
+<script src="./js/jquery.min.js"></script>
+<script src="./js/jquery.jsoneditor.js"></script>
+
+<script>
+    $(document).ready(function() {
+        var json = { };
+        if(window.localStorage.method === 'post' || window.localStorage.method === 'patch') {
+            json = { "beacon": {} }
+        }
+
+        $('#send').click(function() {
+            var store = window.localStorage;
+            if(!store.app_id || !store.id) return;
+
+            $.ajax({
+                url: 'http://carbon-staging.herokuapp.com/api/devices/' + store.id,
+                type: window.localStorage.method,
+                crossDomain: true,
+                headers: {
+                    'Authorization': 'Token token="' + store.app_id + '"'
+                },
+                data: json
+            }).done(function(msg) {
+                window.localStorage.result = JSON.stringify(msg);
+                window.localStorage.msg = 'Success';
+                if(!msg)
+                    window.localStorage.msg += ' but the API sent no data back';
+                window.location = './result.html';
+            }).fail(function(xhr) {
+                window.localStorage.msg = xhr.responseText;
+                window.location = './result.html';
+            });
+        });
+
+        $('#editor').jsonEditor(json, { change: function(newdata) {
+            json = newdata;
+            $('#json').html(JSON.stringify(json));
+        } });
+    });
+</script>

@@ -1,0 +1,28 @@
+<link rel="stylesheet" type="text/css" href="./style/jsoneditor.css"/>
+
+<h1>Result</h1>
+<p id="msg">Message: </p>
+
+<p>JSON data</p>
+<div id="editor" class="json-editor"></div>
+<pre id="json"></pre>
+
+<script src="./js/jquery.min.js"></script>
+<script src="./js/jquery.jsoneditor.js"></script>
+
+<script>
+    $(document).ready(function () {
+        var json;
+        if(window.localStorage.result && window.localStorage.result !== "undefined")
+            json = JSON.parse(window.localStorage.result);
+        else
+            json = {};
+
+        $('#msg').append(window.localStorage.msg);
+
+        $('#editor').jsonEditor(json, { change: function (newdata) {
+            json = newdata;
+            $('#json').html(JSON.stringify(json));
+        } });
+    });
+</script>

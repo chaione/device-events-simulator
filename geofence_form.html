@@ -1,0 +1,72 @@
+<link rel="stylesheet" type="text/css" href="./style/jsoneditor.css"/>
+
+<div id="editor" class="json-editor"></div>
+<pre id="json"></pre>
+
+<button id="send">Submit!</button>
+
+<script src="./js/jquery.min.js"></script>
+<script src="./js/jquery.jsoneditor.js"></script>
+<script>
+    $(document).ready(function() {
+        var json = { };
+
+        function sendRequest(app_id, device_id, method, name) {
+            var _url = 'http://carbon-staging.herokuapp.com/api/geo_fences';
+             if(name && name !== '') {
+                 _url += "/" + name;
+             }
+
+            $.ajax({
+                url: _url,
+                type: method,
+                crossDomain: true,
+                data: json,
+                headers: {
+                    'Authorization': 'Token token="' + app_id + '"',
+                    'CARBON_DEVICE_ID': device_id
+                },
+                done: function() {
+                    console.log(json);
+                    alert('success');
+                },
+                fail: function() {
+                    alert('error');
+                }
+            }).done(function(msg) {
+                window.localStorage.result = JSON.stringify(msg);
+                window.localStorage.msg = 'Success';
+                if(!msg)
+                    window.localStorage.msg += ' but the API sent no data back';
+                window.location = './result.html';
+            }).fail(function(xhr) {
+                window.localStorage.msg = xhr.responseText;
+                window.location = './result.html';
+            });
+        }
+
+        $('#send').click(function() {
+            var store = window.localStorage;
+            if(!store.app_id || !store.device_id) return;
+
+            var method = window.localStorage.method;
+            var name = store.name;
+            if(method && method !== '') {
+                if(method === 'post' || method === 'get') {
+                    sendRequest(store.app_id, store.device_id, method);
+                } else if(method === 'patch') {
+                    if(name && name !== '') {
+                        sendRequest(store.app_id, store.device_id, method, name);
+                    } else {
+                        alert('Have to provide a name to update');
+                    }
+                }
+            }
+        });
+
+        $('#editor').jsonEditor(json, { change: function(newdata) {
+            json = newdata;
+            $('#json').html(JSON.stringify(json));
+        } });
+    });
+</script>
