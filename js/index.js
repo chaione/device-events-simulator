@@ -2,29 +2,6 @@
  * Created by khoat_000 on 3/9/14.
  */
 $(document).ready(function() {
-//    var app1 = {
-//        app_id: 'b4ce61a4-24cb-484b-9f6e-08efb2c64c38',
-    //        device_id: [ 'FC5D2EDD-2BD8-4704-881B-20D321D0D290' ]
-//    };
-//    var app2 = {
-//        app_id: '49f76a62-013a-4bfb-870d-ed04d040254e',
-//        device_id: [ 'A5062C12-080F-4733-A5CE-4BED904C6CF9' ]
-//    }
-//    var apps = [];
-//    apps.push(app1);
-//    apps.push(app2);
-//
-//    for(var i = 0; i < apps.length; i++) {
-//        $('#select_app_id').append($("<option></option>")
-//            .attr("value", apps[i].app_id)
-//            .text(apps[i].app_id));
-//        for(var j = 0; j < apps[i].device_id.length; j++) {
-//            $('select#select_device_id').append($('<option></option>')
-//                .attr("value", apps[i].device_id[j])
-//                .text(apps[i].device_id[j]));
-//        }
-//    }
-
     $('#get-beacon').click(function() {
         var app_id = $('#select_app_id').val();
         var device_id = $('#select_device_id').val();
@@ -41,11 +18,9 @@ $(document).ready(function() {
             }).done(function(msg) {
                 window.localStorage.result = JSON.stringify(msg);
                 window.localStorage.msg = 'Success';
-                if(!msg)
-                    window.localStorage.msg += ' but the API sent no data back';
                 window.location = './result.html';
             }).fail(function(xhr) {
-                window.localStorage.msg = xhr.responseText;
+                window.localStorage.msg = 'Error ' + xhr.responseText;
                 window.location = './result.html';
             });
         }
@@ -106,16 +81,22 @@ $(document).ready(function() {
         var app_id = $('#select_app_id').val();
         var device_id = $('#select_device_id').val();
 
-        if(app_id === '') {
-            alert('The App ID is required');
-        } else if(device_id === '') {
-            alert('The device ID is required');
+        var name = prompt("Please enter beacon name");
+        if(name && name !== "") {
+            if(app_id === '') {
+                alert('The App ID is required');
+            } else if(device_id === '') {
+                alert('The device ID is required');
+            } else {
+                window.localStorage.clear();
+                window.localStorage.app_id =  app_id;
+                window.localStorage.device_id = device_id;
+                window.localStorage.name = name;
+                window.localStorage.method = 'patch';
+                window.location = './beacon_form.html';
+            }
         } else {
-            window.localStorage.clear();
-            window.localStorage.app_id =  app_id;
-            window.localStorage.device_id = device_id;
-            window.localStorage.method = 'patch';
-            window.location = './beacon_form.html';
+            alert('The Beacon name is required');
         }
     });
 
@@ -150,7 +131,6 @@ $(document).ready(function() {
 
     $('#edit-devices').click(function() {
         var id = prompt("Please enter device id");
-        id = parseInt(id);
         if(id && id !== NaN) {
             var app_id = $('#select_app_id').val();
             if(app_id === '') {
@@ -162,7 +142,7 @@ $(document).ready(function() {
                 window.location = './device_form.html';
             }
         } else {
-            alert("Please enter a valid integer")
+            alert("The device_id is required")
         }
     });
 

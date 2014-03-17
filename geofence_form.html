@@ -36,11 +36,9 @@
             }).done(function(msg) {
                 window.localStorage.result = JSON.stringify(msg);
                 window.localStorage.msg = 'Success';
-                if(!msg)
-                    window.localStorage.msg += ' but the API sent no data back';
                 window.location = './result.html';
             }).fail(function(xhr) {
-                window.localStorage.msg = xhr.status + " " + xhr.responseText;
+                window.localStorage.msg = 'Error ' + xhr.status + " " + xhr.responseText;
                 window.location = './result.html';
             });
         }

@@ -8,16 +8,16 @@
 <script src="./js/jquery.min.js"></script>
 <script src="./js/jquery.jsoneditor.js"></script>
 <script>
-    $(document).ready(function() {
+    $(document).ready(function () {
         var json = { data: {} };
 
         function sendRequest(app_id, method, container, data_id) {
             var _url = 'http://carbon-staging.herokuapp.com/api/vault/data';
-            if(container && container !== '') {
-                    _url += "/" + container;
+            if (container && container !== '') {
+                _url += "/" + container;
             }
 
-            if(data_id && data_id !== '') {
+            if (data_id && data_id !== '') {
                 _url += "/" + data_id;
             }
 
@@ -29,36 +29,34 @@
                 headers: {
                     'Authorization': 'Token token="' + app_id + '"'
                 }
-            }).done(function(msg) {
-                window.localStorage.result = JSON.stringify(msg);
-                window.localStorage.msg = 'Success';
-                if(!msg)
-                    window.localStorage.msg += ' but the API sent no data back';
-                window.location = './result.html';
-            }).fail(function(xhr) {
-                window.localStorage.msg = xhr.status + " " + xhr.responseText;
-                window.location = './result.html';
-            });
+            }).done(function (msg) {
+                        window.localStorage.result = JSON.stringify(msg);
+                        window.localStorage.msg = 'Success';
+                        window.location = './result.html';
+                    }).fail(function (xhr) {
+                        window.localStorage.msg = 'Error ' + xhr.status + " " + xhr.responseText;
+                        window.location = './result.html';
+                    });
         }
 
-        $('#send').click(function() {
+        $('#send').click(function () {
             var store = window.localStorage;
-            if(!store.app_id) return;
+            if (!store.app_id) return;
 
             var method = window.localStorage.method;
             var container = store.container;
             var data_id = store.data_id;
-            if(method && method !== '') {
-                if(method === 'get') {
+            if (method && method !== '') {
+                if (method === 'get') {
                     sendRequest(store.app_id, method);
-                } else if(method === 'patch') {
-                    if(container && container !== '' && data_id && data_id !== '') {
+                } else if (method === 'patch') {
+                    if (container && container !== '' && data_id && data_id !== '') {
                         sendRequest(store.app_id, method, container, data_id);
                     } else {
                         alert('Have to provide a container and data_id to update/delete');
                     }
-                } else if(method === 'post') {
-                    if(container && container !== '') {
+                } else if (method === 'post') {
+                    if (container && container !== '') {
                         sendRequest(store.app_id, method, container, data_id);
                     } else {
                         alert('Have to provide a container update/delete');
@@ -67,9 +65,9 @@
             }
         });
 
-            $('#editor').jsonEditor(json, { change: function(newdata) {
-                json = newdata;
-                $('#json').html(JSON.stringify(json));
-            } });
+        $('#editor').jsonEditor(json, { change: function (newdata) {
+            json = newdata;
+            $('#json').html(JSON.stringify(json));
+        } });
     });
 </script>

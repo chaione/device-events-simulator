@@ -18,10 +18,12 @@
         else
             json = {};
 
-        if(window.localStorage.msg == '') {
+        if(window.localStorage.msg && window.localStorage.msg === '') {
             window.localStorage.msg = 'Error';
             json = {};
         }
+
+        if(window.localStorage.msg.indexOf('Error') !== -1) json = {};
 
         $('#msg').append(window.localStorage.msg);
 

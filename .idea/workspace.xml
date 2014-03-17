@@ -23,10 +23,28 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="index.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/js/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="146" column="7" selection-start="5212" selection-end="5212" vertical-scroll-proportion="0.85330075" vertical-offset="1841" max-vertical-offset="6420">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="device_form.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/device_form.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="34" column="53" selection-start="1245" selection-end="1245" vertical-scroll-proportion="-5.4166665" vertical-offset="380" max-vertical-offset="765">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="62" selection-start="446" selection-end="446" vertical-scroll-proportion="-1.3422713" vertical-offset="1151" max-vertical-offset="1845">
+            <state line="42" column="13" selection-start="981" selection-end="981" vertical-scroll-proportion="-3.5416667" vertical-offset="545" max-vertical-offset="1815">
               <folding>
                 <element signature="n#style#0;n#p#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#p#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -39,10 +57,28 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="beacon-name.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/beacon-name.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="34" column="42" selection-start="1091" selection-end="1091" vertical-scroll-proportion="-5.3333335" vertical-offset="382" max-vertical-offset="810">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="beacon_form.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/beacon_form.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="32" column="53" selection-start="1148" selection-end="1159" vertical-scroll-proportion="-12.833333" vertical-offset="172" max-vertical-offset="1020">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="vault_form.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/vault_form.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="43" column="37" selection-start="1492" selection-end="1492" vertical-scroll-proportion="-8.625" vertical-offset="438" max-vertical-offset="1215">
+            <state line="36" column="61" selection-start="1286" selection-end="1286" vertical-scroll-proportion="1.4166666" vertical-offset="574" max-vertical-offset="1185">
               <folding />
             </state>
           </provider>
@@ -51,7 +87,7 @@
       <file leaf-file-name="result.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/result.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="22" selection-start="650" selection-end="650" vertical-scroll-proportion="-13.75" vertical-offset="0" max-vertical-offset="585">
+            <state line="28" column="0" selection-start="813" selection-end="813" vertical-scroll-proportion="-11.25" vertical-offset="150" max-vertical-offset="615">
               <folding />
             </state>
           </provider>
@@ -60,7 +96,7 @@
       <file leaf-file-name="geofence_form.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/geofence_form.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="42" column="61" selection-start="1505" selection-end="1505" vertical-scroll-proportion="-4.9166665" vertical-offset="512" max-vertical-offset="1170">
+            <state line="40" column="53" selection-start="1391" selection-end="1391" vertical-scroll-proportion="-5.3333335" vertical-offset="472" max-vertical-offset="1140">
               <folding />
             </state>
           </provider>
@@ -69,7 +105,7 @@
       <file leaf-file-name="event_form.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/event_form.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="70" selection-start="561" selection-end="561" vertical-scroll-proportion="-8.041667" vertical-offset="92" max-vertical-offset="750">
+            <state line="31" column="53" selection-start="1069" selection-end="1069" vertical-scroll-proportion="-5.4166665" vertical-offset="335" max-vertical-offset="720">
               <folding />
             </state>
           </provider>
@@ -89,9 +125,9 @@
         <option value="$PROJECT_DIR$/create_beacon.js" />
         <option value="$PROJECT_DIR$/response.html" />
         <option value="$PROJECT_DIR$/create_beacon.html" />
+        <option value="$PROJECT_DIR$/result.html" />
         <option value="$PROJECT_DIR$/beacon-name.html" />
         <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/result.html" />
         <option value="$PROJECT_DIR$/beacon_form.html" />
         <option value="$PROJECT_DIR$/device_form.html" />
         <option value="$PROJECT_DIR$/event_form.html" />
@@ -272,7 +308,7 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32507288" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32944608" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32944608" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2497939" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -508,65 +544,58 @@
         <state line="16" column="20" selection-start="298" selection-end="298" vertical-scroll-proportion="0.46258503" vertical-offset="0" max-vertical-offset="1445" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/beacon-name.html">
+    <entry file="file://$PROJECT_DIR$/result.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="7" selection-start="140" selection-end="140" vertical-scroll-proportion="0.0" vertical-offset="75" max-vertical-offset="840">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/device_form.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="61" selection-start="1359" selection-end="1359" vertical-scroll-proportion="0.5735786" vertical-offset="197" max-vertical-offset="795">
+        <state line="28" column="0" selection-start="813" selection-end="813" vertical-scroll-proportion="-11.25" vertical-offset="150" max-vertical-offset="615">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/beacon_form.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="61" selection-start="1254" selection-end="1273" vertical-scroll-proportion="0.20189275" vertical-offset="382" max-vertical-offset="1050">
+        <state line="32" column="53" selection-start="1148" selection-end="1159" vertical-scroll-proportion="-12.833333" vertical-offset="172" max-vertical-offset="1020">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/index.js">
+    <entry file="file://$PROJECT_DIR$/device_form.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="20" selection-start="397" selection-end="397" vertical-scroll-proportion="-8.93921" vertical-offset="6062" max-vertical-offset="6720">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vault_form.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="37" selection-start="1492" selection-end="1492" vertical-scroll-proportion="-8.625" vertical-offset="438" max-vertical-offset="1215">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/result.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="22" selection-start="650" selection-end="650" vertical-scroll-proportion="-13.75" vertical-offset="0" max-vertical-offset="585">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/geofence_form.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="61" selection-start="1505" selection-end="1505" vertical-scroll-proportion="-4.9166665" vertical-offset="512" max-vertical-offset="1170">
+        <state line="34" column="53" selection-start="1245" selection-end="1245" vertical-scroll-proportion="-5.4166665" vertical-offset="380" max-vertical-offset="765">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/event_form.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="70" selection-start="561" selection-end="561" vertical-scroll-proportion="-8.041667" vertical-offset="92" max-vertical-offset="750">
+        <state line="31" column="53" selection-start="1069" selection-end="1069" vertical-scroll-proportion="-5.4166665" vertical-offset="335" max-vertical-offset="720">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/geofence_form.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="40" column="53" selection-start="1391" selection-end="1391" vertical-scroll-proportion="-5.3333335" vertical-offset="472" max-vertical-offset="1140">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vault_form.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="36" column="61" selection-start="1286" selection-end="1286" vertical-scroll-proportion="1.4166666" vertical-offset="574" max-vertical-offset="1185">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/beacon-name.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="34" column="42" selection-start="1091" selection-end="1091" vertical-scroll-proportion="-5.3333335" vertical-offset="382" max-vertical-offset="810">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="62" selection-start="446" selection-end="446" vertical-scroll-proportion="-1.3422713" vertical-offset="1151" max-vertical-offset="1845">
+        <state line="42" column="13" selection-start="981" selection-end="981" vertical-scroll-proportion="-3.5416667" vertical-offset="545" max-vertical-offset="1815">
           <folding>
             <element signature="n#style#0;n#p#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#p#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -575,6 +604,13 @@
             <element signature="n#style#0;n#p#4;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#p#5;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="146" column="7" selection-start="5212" selection-end="5212" vertical-scroll-proportion="0.85330075" vertical-offset="1841" max-vertical-offset="6420">
+          <folding />
         </state>
       </provider>
     </entry>
