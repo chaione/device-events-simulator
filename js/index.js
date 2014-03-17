@@ -200,7 +200,7 @@ $(document).ready(function() {
         var app_id = $('#select_app_id').val();
         var device_id = $('#select_device_id').val();
 
-        var name = prompt("Enter geo_fence id");
+        var name = prompt("Enter geo_fence name");
         if(!name || name === '') return;
 
         if(app_id === '') {
@@ -222,7 +222,7 @@ $(document).ready(function() {
                     window.localStorage.msg += ' but the API sent no data back';
                 window.location = './result.html';
             }).fail(function(xhr) {
-                window.localStorage.msg = xhr.responseText;
+                window.localStorage.msg = 'Error ' + xhr.status + " " + xhr.responseText;
                 window.location = './result.html';
             });
         }
