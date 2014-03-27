@@ -20,7 +20,7 @@
             if(!store.app_id || !store.id) return;
 
             $.ajax({
-                url: 'http://carbon-staging.herokuapp.com/api/devices/' + store.id,
+                url: 'http://contexthub-staging.herokuapp.com/api/devices/' + store.id,
                 type: window.localStorage.method,
                 crossDomain: true,
                 headers: {

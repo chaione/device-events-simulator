@@ -12,7 +12,7 @@
         var json = { data: {} };
 
         function sendRequest(app_id, method, container, data_id) {
-            var _url = 'http://carbon-staging.herokuapp.com/api/vault/data';
+            var _url = 'http://contexthub-staging.herokuapp.com/api/vault/data';
             if (container && container !== '') {
                 _url += "/" + container;
             }

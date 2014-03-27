@@ -10,7 +10,7 @@ $(document).ready(function() {
             alert('The App ID is required');
         } else {
             $.ajax({
-                url: 'http://carbon-staging.herokuapp.com/api/beacons',
+                url: 'http://contexthub-staging.herokuapp.com/api/beacons',
                 headers: {
                     'Authorization': 'Token token="' + app_id + '"',
                     'CARBON_DEVICE_ID': device_id
@@ -106,7 +106,7 @@ $(document).ready(function() {
             alert('The App ID is required');
         } else {
             $.ajax({
-                url: 'http://carbon-staging.herokuapp.com/api/devices',
+                url: 'http://contexthub-staging.herokuapp.com/api/devices',
                 headers: {
                     'Authorization': 'Token token="' + app_id + '"'
                 },
@@ -209,7 +209,7 @@ $(document).ready(function() {
             alert('The device ID is required');
         } else {
             $.ajax({
-                url: 'http://carbon-staging.herokuapp.com/api/geo_fences/' + name,
+                url: 'http://contexthub-staging.herokuapp.com/api/geo_fences/' + name,
                 type: 'delete',
                 headers: {
                     'Authorization': 'Token token="' + app_id + '"',
@@ -244,7 +244,7 @@ $(document).ready(function() {
             alert('The device ID is required');
         } else {
             $.ajax({
-                url: 'http://carbon-staging.herokuapp.com/api/geo_fences/' + name,
+                url: 'http://contexthub-staging.herokuapp.com/api/geo_fences/' + name,
                 type: 'get',
                 headers: {
                     'Authorization': 'Token token="' + app_id + '"',
@@ -294,7 +294,7 @@ $(document).ready(function() {
             alert('The App ID is required');
         } else {
             $.ajax({
-                url: 'http://carbon-staging.herokuapp.com/api/manifest',
+                url: 'http://contexthub-staging.herokuapp.com/api/manifest',
                 headers: {
                     'Authorization': 'Token token="' + app_id + '"'
                 }
@@ -318,7 +318,7 @@ $(document).ready(function() {
             alert('The App ID is required');
         } else {
             $.ajax({
-                url: 'http://carbon-staging.herokuapp.com/api/vault/data',
+                url: 'http://contexthub-staging.herokuapp.com/api/vault/data',
                 headers: {
                     'Authorization': 'Token token="' + app_id + '"'
                 }
@@ -380,7 +380,7 @@ $(document).ready(function() {
         if(app_id === '') {
             alert('The App ID is required');
         } else {
-            var _url = 'http://carbon-staging.herokuapp.com/api/vault/data/' + container + '/'+ data_id;
+            var _url = 'http://contexthub-staging.herokuapp.com/api/vault/data/' + container + '/'+ data_id;
 
             $.ajax({
                 url: _url,
